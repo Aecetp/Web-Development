@@ -1,0 +1,225 @@
+body{
+    margin: 0px ;
+    background-color: rgba(242, 248, 187, 0.938);   
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    overflow-x: hidden;
+
+}
+
+main{
+    
+    display: flex;
+    height: 100vh;
+    flex-wrap: wrap;
+    
+}
+/* ------------------------------------------------- */
+
+.image-description{
+    width: 100%;
+    height: 50%;
+    background-image: url('https://img.freepik.com/premium-photo/red-leaf-wallpapers-that-are-iphone_7023-5518.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.line-logo{
+    width: 100%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.795);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+}
+.logo-gorgon{
+    width: 20%;
+    height: auto;
+    position: relative;
+}
+
+H3{
+    margin-left: 30px;
+    font-size: 30px;
+    color: rgb(255, 252, 214);
+}
+/* ------------------------------------------------- */
+
+.content-register{
+    width: 100%;
+    display: flex;
+   justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.head-register{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+h2{
+    width: 100%;
+}
+/* ------------------------------------------------- */
+.form-register-content{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    
+}
+.form-register{
+    width: 100%;
+    
+}
+.form-fields{
+    width: 100%;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    
+}
+legend{
+    font-size: 14px;
+}
+input{
+    border-style: none;
+    border-radius: 2px;
+    width: 300px;
+    height: 30px;
+    margin-top: 5px;
+    font-size: 15px;
+    padding-left: 10px;
+    outline: rgb(253, 209, 192) 2px solid;
+}
+
+input:focus{
+    border: 0px;
+    background-color: rgb(235, 213, 253);
+    outline: 2px solid rgba(35, 6, 83, 0.349);
+}
+.input-error  {
+    border: 0px;
+    background-color: rgb(255, 206, 206);
+    outline: 2px solid rgba(255, 3, 3, 0.349);
+}
+
+/* ------------------------------------------------- */
+.upload-info{
+    /*  border: black solid 1px;*/
+    width: 100%;
+    height: 50%;
+    margin-top: 10%;
+   
+}
+
+.create-account{
+    color: rgb(238, 225, 108);
+    background-color: rgb(0, 0, 0);
+    border-style: none;
+    border-radius: 3px;
+    font-size: 17px;
+    width: 100%;
+    height: 100%;
+}
+.create-account:hover{
+    background: rgba(0, 0, 0, 0.938);
+    cursor: pointer;
+}
+.create-account:active{
+    background: rgba(46, 19, 3, 0.829);
+   
+}
+
+.login{
+    color: rgb(2, 17, 7);
+}
+.login:hover{
+    color: rgba(141, 59, 5, 0.89);
+    cursor: pointer;
+}
+.login:active{
+    color: brown;
+}
+/* --------------------------------------------------------------- */
+
+.different-message{
+    font-size: 9px;
+    margin-top: 5px;
+    color: red;
+    height: 10px;
+}
+
+
+/* /////////////////////////////////// */
+@media (min-width: 900px) {
+    body{
+        
+        overflow-y: hidden;
+    }
+    main{
+        display: flex;
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+    .image-description{
+        width:60%;
+        height: 100%;
+        
+    }
+    .content-register{
+        width: 50%;
+        align-content: center; 
+        padding-left: 30px;
+    }
+    .head-register{
+        padding:0px;
+    }
+    .form-register-content{
+        padding:0px;
+    }
+    /* ---------------------- */
+    input{
+        width: 90%;
+    }
+}
+
+/* ---------------------------------- */
+@media (max-width:890px) {
+    
+    .form-fields{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    legend{
+        display: flex;
+        flex-direction: column;
+        
+
+    }
+    .upload-info{
+        /*  border: black solid 1px;*/
+        width: 100%;
+        height: 100%;
+        margin-top: 10%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+       
+    }
+    .create-account{
+        width: 50%;
+        height: 45px;
+        font-size: 80%;
+    }
+}

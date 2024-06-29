@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gorgon login</title>
+    <link rel="stylesheet" href="styles_login.css">
+
+    <script>
+        let isValid = true;
+        let divs = "";
+        function validation() {
+            divs = document.querySelectorAll(".different-message");
+            let fields = [
+                document.getElementById("fname"),
+                document.getElementById("lname"),
+                document.getElementById("email"),
+                document.getElementById("tel"),
+                document.getElementById("pass"),
+                document.getElementById("confirpass")
+            ];
+
+            fields.forEach(field => {
+                if (field.value.trim() === "") {
+                    field.classList.add("input-error");
+                    isValid = false; // Hay un campo vacío, el formulario no es válido
+
+                } else {
+                    field.classList.remove("input-error");
+                }
+
+                // Añadir eventos para eliminar la clase de error al escribir o al enfocar
+                field.addEventListener('input', function() {
+                    this.classList.remove("input-error");
+                });
+
+                field.addEventListener('focus', function() {
+                    this.classList.remove("input-error");
+                });
+            });
+            if(fields[4].value != fields[5].value){
+            // Asignar un nuevo texto al elemento <p>
+                isValid=false;
+                divs.forEach(function(div) {
+                div.textContent = "Contraseñas no coinciden";
+                });             
+            }else{ 
+                divs.forEach(function(div){
+                    div.textContent = "";
+                });
+                
+            }
+
+        }
+
+
+        
+
+       /*  function handleSubmit() {
+            if (validation()) {
+                // El formulario es válido, se puede enviar la información
+                alert("Formulario enviado con éxito");
+                // Aquí puedes agregar la lógica para enviar el formulario, como un submit.
+                // document.getElementById('myForm').submit();
+            } else {
+                // El formulario no es válido, muestra un mensaje de error o toma alguna acción
+                alert("Por favor, complete todos los campos.");
+            }
+        }
+ */
+    </script>
+
+</head>
+<body>
+    <header>    </header>
+    <main>
+        <section class="image-description">
+            <div class="line-logo">
+                <img class="logo-gorgon" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a1e4bb73-33fc-449e-b320-b351d9060290/dgqd9og-6da1a99b-a44a-44b6-842d-63b6fe403596.png/v1/fill/w_900,h_899/medusa_the_gorgon_by_wickeddual_dgqd9og-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2ExZTRiYjczLTMzZmMtNDQ5ZS1iMzIwLWIzNTFkOTA2MDI5MFwvZGdxZDlvZy02ZGExYTk5Yi1hNDRhLTQ0YjYtODQyZC02M2I2ZmU0MDM1OTYucG5nIiwiaGVpZ2h0IjoiPD04OTkiLCJ3aWR0aCI6Ijw9OTAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLndhdGVybWFyayJdLCJ3bWsiOnsicGF0aCI6Ilwvd21cL2ExZTRiYjczLTMzZmMtNDQ5ZS1iMzIwLWIzNTFkOTA2MDI5MFwvd2lja2VkZHVhbC00LnBuZyIsIm9wYWNpdHkiOjk1LCJwcm9wb3J0aW9ucyI6MC40NSwiZ3Jhdml0eSI6ImNlbnRlciJ9fQ.U1UXJhCPsyJdUpKWMLOLX-owBMzv9nliD0Ol_foHFoQ" alt="gorgon">
+
+                <h3>G O R G O N</h3>
+            </div>
+        </section>
+        <section class="content-register">
+            <header class="head-register">
+                <div class="presentation">
+                    <h2>Sign Up for free!</h2>
+                    <p>You can access a this page creating your account free</p>
+                </div>
+            </header>
+            <section class="form-register-content">
+                <h2>Let's do this!</h2>
+                <div class="form-register">
+                    <form id="register" class="form-fields" action="#">
+                        <legend> First Name
+                            <input id="fname" type="text" required>
+                        </legend>
+                        <legend> Last Name
+                            <input id="lname" type="text">
+                        </legend>
+                        <legend> Email 
+                            <input id="email" type="email" required>
+                        </legend>
+                        <legend> Telephone
+                            <input id="tel" type="tel" required>
+                        </legend>
+                        <legend> Password
+                            <input id="pass" type="password" required>
+                            <div class="different-message"></div>
+                        </legend>
+                        <legend> Confirm Password
+                            <input id="confirpass" type="password" required>
+                            <div class="different-message"></div>
+                        </legend>
+                        <div class="upload-info">
+                            <button class="create-account" onclick="validation()" >Create acccount</button>       
+                            <div class="login-link">
+                                <p role="button">Are you registered? <b class="login">Login here</b></p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- --------------------------------------- -->
+                
+            </section>
+        </section>
+    </main>
+</body>
+</html>
