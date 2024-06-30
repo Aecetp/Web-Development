@@ -2,7 +2,7 @@ title: Mi Sitio de Jekyll
 email: hj4mnop1@gmail.com
 description: > # este ">" significa que el texto se tratará como un solo párrafo
   Esta es la descripción de mi sitio web de Jekyll.
-baseurl: "/Web-development" # el subdirectorio en el que se publica el sitio, deja vacío si es el dominio raíz
+baseurl: "/Web-development/Sign-up" # el subdirectorio en el que se publica el sitio, deja vacío si es el dominio raíz
 url: "https://Aecetp.github.io" # la URL base del sitio
 
 markdown: kramdown
